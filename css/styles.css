@@ -1,0 +1,293 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+p {
+  color: #8f8f8f;
+  font-size: 1rem;
+}
+
+#title {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.title-principal {
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  padding: 3vh 15vw;
+}
+
+/* Navigation Bar */
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* Download-buttons */
+.title-description-container {}
+
+#title .download-button {
+  margin: 10% 5% 0 0;
+}
+
+.title-image-container {
+  position: relative;
+}
+
+.title-image {
+  width: 60%;
+  max-width: 60%;
+  transform: rotate(25deg);
+  right: 20%;
+  position: absolute;
+}
+
+/* features */
+#features {
+  background-color: #fff;
+  position: relative;
+}
+
+.feature-icon {
+  color: #ef8172;
+  font-size: 3.5rem;
+}
+
+.feature-icon:hover {
+  color: #ff4c68;
+}
+
+.feature-container {
+  padding: 120px 0 0;
+}
+
+.feature-description {
+  margin-bottom: 120px;
+}
+
+.feature-description p {
+  padding: 0 10%;
+}
+
+/* Testimonials */
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  color: #fff;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+.testimonial-img {
+  width: 15%;
+  border-radius: 100%;
+  margin: 60px 25px 25px;
+}
+
+/* .testimonial-text {
+  font-size: 2.5rem;
+} */
+
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 6%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 0 30px;
+}
+
+/* Cards */
+.card {
+  height: 100%;
+}
+
+.card-header {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+/* pricing */
+#pricing {
+  padding: 0 100px;
+  text-align: center;
+}
+
+.pricing-description {
+  padding: 60px 0;
+}
+
+/* Cta */
+#cta {
+  text-align: center;
+  background-color: #ff4c68;
+  padding: 20px 0 120px;
+  margin-top: 80px;
+}
+
+#cta h3 {
+  color: #fff;
+  padding: 60px 0 55px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 40%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+#cta .download-button {
+  margin-right: 2.5%;
+}
+
+/* footer */
+#footer {
+  text-align: center;
+}
+
+.footer-content {
+  padding: 60px 0;
+  line-height: 2;
+}
+
+.footer-content i {
+  padding: 0 30px;
+  font-size: 2rem;
+}
+
+.footer-content i:hover {
+  color: #ff4c68;
+  cursor: pointer;
+}
+
+.fa-github {
+  color: #000;
+}
+
+@media (min-width: 992px) {
+  #title {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 1069px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    transform: rotate(0);
+    position: static;
+    padding: 70px 0 30px;
+  }
+
+  .testimonial-img {
+    width: 25%;
+    margin: 60px 10px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 2.0rem;
+  }
+
+  #title h1 {
+    font-size: 3.0rem;
+  }
+
+  #features {
+    font-size: 1.5rem;
+  }
+
+  .pricing-column {
+    padding-bottom: 50px;
+  }
+
+  .press-logo {
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  /* p {
+    font-size: 0.85rem;
+  } */
+
+  #cta h3 {
+    font-size: 2.0rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  #title h1 {
+    font-size: 2.0rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.75rem;
+  }
+
+  #features {
+    font-size: 1.0rem;
+  }
+
+  .carousel-item em {
+    line-height: 0.5rem;
+    margin: 0;
+
+  }
+
+  #pricing {
+    padding: 0 2%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #cta h3 {
+    font-size: 1.5rem;
+  }
+
+}
