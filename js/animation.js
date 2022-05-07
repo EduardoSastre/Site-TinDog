@@ -1,128 +1,131 @@
+//--------------------Animations ---------------------
+
 gsap.registerPlugin(ScrollTrigger);
 
 ww = window.innerWidth;
 wh = window.innerHeight;
 
-var tl = gsap.timeline({repeat:-1, yoyo: true});
+var tl = gsap.timeline();
 
-tl.to('.Top-Container__TopCloud', {
-  duration: 20,
-  x: ww*-0.55
-});
+//-----------------title----------------------
 
-tl.to('.Top-Container__BottomCloud', {
-  duration: 20,
-  x: ww*0.50
-}, 0);
+if (innerWidth > 991) {
+  tl.from('.title-description-container', {
+    duration: 1.5,
+    opacity: 0
+  });
 
-tl.to('.Top-Container__BottomCloud2', {
-  duration: 20,
-  x: ww*-0.50
-}, 0);
-
-gsap.from('h1', {
-  duration: 2,
-  opacity: 0
-}, 0);
-
-gsap.from('.Top-Container__Description', {
-  delay: 1,
-  duration: 2,
-  opacity: 0
-}, 0);
-
-gsap.from('p', {
-  duration: 2,
-  y: +50
-}, 0);
-
-if ( ww > 420 )
-{
-  gsap.from('.skill-row1', {
-    x: -0.10*ww,
+  tl.from('.title-image', {
+    x: 0.10 * ww,
     opacity: 0,
-    duration: 2,
+    duration: 1,
     scrollTrigger: {
-      trigger: '.skill-row1',
-      start: "center 80%",
+      trigger: '.title-image',
+      start: "top center",
     }
   });
 
-  gsap.from('.skill-row2', {
-    x: 0.10*ww,
+  gsap.from('.feature-description', {
     opacity: 0,
-    duration: 2,
+    duration: 0.75,
+    stagger: 0.5,
     scrollTrigger: {
-      trigger: '.skill-row2',
-      start: "center 80%",
+      trigger: '.feature-description',
+      start: "bottom bottom",
     }
   });
+
+  gsap.from('.pricing-column', {
+    opacity: 0,
+    duration: 0.75,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: '.row',
+      start: "top center",
+    }
+  });
+
+  gsap.from('.card', {
+    opacity: 0,
+    duration: 2,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: '.card',
+      start: "90% bottom",
+    }
+  });
+
 }
 else{
-  gsap.from('.skill-row1', {
-    x: -0.05*ww,
+  gsap.from('.title-description-container', {
+    duration: 3,
+    opacity: 0
+  });
+
+  gsap.from('.title-image', {
+    x: 0.10 * ww,
     opacity: 0,
     duration: 2,
     scrollTrigger: {
-      trigger: '.skill-row1',
-      start: "center 80%",
+      trigger: '.title-image',
+      start: "top center",
     }
   });
 
-  gsap.from('.skill-row2', {
-    x: 0.05*ww,
+  gsap.from('.feature1', {
+    x: 0.10 * ww,
+    opacity: 0,
+    duration: 0.75,
+    scrollTrigger: {
+      trigger: '.feature1',
+      start: "top 75%",
+    }
+  });
+
+  gsap.from('.feature2', {
+    x: -0.10 * ww,
+    opacity: 0,
+    duration: 0.75,
+    scrollTrigger: {
+      trigger: '.feature2',
+      start: "top 75%",
+    }
+  });
+
+  gsap.from('.feature3', {
+    x: 0.10 * ww,
+    opacity: 0,
+    duration: 0.75,
+    scrollTrigger: {
+      trigger: '.feature3',
+      start: "top 75%",
+    }
+  });
+
+  gsap.from('.card1', {
     opacity: 0,
     duration: 2,
     scrollTrigger: {
-      trigger: '.skill-row2',
-      start: "center 80%",
+      trigger: '.card1',
+      start: "90% bottom",
+    }
+  });
+
+  gsap.from('.card2', {
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: '.card2',
+      start: "90% bottom",
+    }
+  });
+
+  gsap.from('.card3', {
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+      trigger: '.card3',
+      start: "90% bottom",
     }
   });
 }
-
-gsap.from('.profile__MyImg', {
-  scale: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.profile__MyImg',
-    start: "center 80%",
-  }
-});
-
-gsap.from('.profile__title', {
-  delay: 1,
-  opacity: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.profile__MyImg',
-    start: "center 80%",
-  }
-});
-
-gsap.from('.profile__description', {
-  delay: 1.5,
-  opacity: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.profile__MyImg',
-    start: "center 80%",
-  }
-});
-
-gsap.from('.skills__title', {
-  opacity: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.skills__title',
-    start: "center 80%",
-  }
-});
-
-gsap.from('.contact-me', {
-  opacity: 0,
-  duration: 2,
-  scrollTrigger: {
-    trigger: '.skill-row2',
-    start: "center center",
-  }
-});
